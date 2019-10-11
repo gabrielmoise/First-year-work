@@ -1,0 +1,214 @@
+Archive member included to satisfy reference by file (symbol)
+
+C:\Program Files (x86)\GNU Tools ARM Embedded\7 2018-q2-update\arm-none-eabi\lib\thumb\v6-m\libgcc.a(_udivsi3.o)
+                              lib.o (__aeabi_uidiv)
+C:\Program Files (x86)\GNU Tools ARM Embedded\7 2018-q2-update\arm-none-eabi\lib\thumb\v6-m\libgcc.a(_dvmd_tls.o)
+                              C:\Program Files (x86)\GNU Tools ARM Embedded\7 2018-q2-update\arm-none-eabi\lib\thumb\v6-m\libgcc.a(_udivsi3.o) (__aeabi_idiv0)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x00000000         0x00040000         xr
+RAM              0x20000000         0x00004000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD primes.o
+LOAD lib.o
+LOAD startup.o
+LOAD C:\Program Files (x86)\GNU Tools ARM Embedded\7 2018-q2-update\arm-none-eabi\lib\thumb\v6-m\libgcc.a
+
+.text           0x00000000      0x908
+ *(.vectors)
+ .vectors       0x00000000       0xc0 startup.o
+                0x00000000                __vectors
+ *(.text*)
+ .text          0x000000c0      0x318 primes.o
+                0x000000c0                serial_putc
+                0x00000104                serial_init
+                0x000001b4                uart_handler
+                0x000001f8                serial_printf
+                0x00000218                modulo
+                0x00000224                prime
+                0x00000250                start_timer
+                0x00000270                stop_timer
+                0x0000027c                rng_init
+                0x000002a0                rng_handler
+                0x000002e8                randint
+                0x00000330                roll
+                0x0000034a                init
+ .text          0x000003d8      0x20c lib.o
+                0x00000534                atoi
+                0x00000574                xtou
+                0x0000059e                do_print
+                0x000005b2                sprintf
+ .text          0x000005e4      0x15c startup.o
+                0x000005e4                spin
+                0x000005e4                default_handler
+                0x0000062c                lpcomp_handler
+                0x0000062c                systick_handler
+                0x0000062c                timer0_handler
+                0x0000062c                swi0_handler
+                0x0000062c                rtc0_handler
+                0x0000062c                rtc1_handler
+                0x0000062c                wdt_handler
+                0x0000062c                timer2_handler
+                0x0000062c                timer1_handler
+                0x0000062c                nmi_handler
+                0x0000062c                hardfault_handler
+                0x0000062c                swi5_handler
+                0x0000062c                svc_handler
+                0x0000062c                swi4_handler
+                0x0000062c                adc_handler
+                0x0000062c                swi1_handler
+                0x0000062c                qdec_handler
+                0x0000062c                spi0_twi0_handler
+                0x0000062c                temp_handler
+                0x0000062c                power_clock_handler
+                0x0000062c                gpiote_handler
+                0x0000062c                radio_handler
+                0x0000062c                swi2_handler
+                0x0000062c                ccm_aar_handler
+                0x0000062c                pendsv_handler
+                0x0000062c                ecb_handler
+                0x0000062c                swi3_handler
+                0x0000062c                spi1_twi1_handler
+                0x00000634                null
+                0x00000634                phos_start
+                0x00000634                phos_init
+                0x00000636                __reset
+                0x000006b0                set_priority
+                0x00000710                enable_irq
+                0x00000720                disable_irq
+                0x00000730                clear_pending
+ .text          0x00000740      0x120 C:\Program Files (x86)\GNU Tools ARM Embedded\7 2018-q2-update\arm-none-eabi\lib\thumb\v6-m\libgcc.a(_udivsi3.o)
+                0x00000740                __aeabi_uidiv
+                0x00000740                __udivsi3
+                0x0000084c                __aeabi_uidivmod
+ .text          0x00000860        0x4 C:\Program Files (x86)\GNU Tools ARM Embedded\7 2018-q2-update\arm-none-eabi\lib\thumb\v6-m\libgcc.a(_dvmd_tls.o)
+                0x00000860                __aeabi_idiv0
+                0x00000860                __aeabi_ldiv0
+ *(.rodata*)
+ .rodata.str1.4
+                0x00000864       0x34 primes.o
+ .rodata        0x00000898       0x58 lib.o
+ .rodata.str1.4
+                0x000008f0       0x18 lib.o
+                                 0x17 (size before relaxing)
+                0x00000908                . = ALIGN (0x4)
+                0x00000908                __etext = .
+
+.glue_7         0x00000908        0x0
+ .glue_7        0x00000908        0x0 linker stubs
+
+.glue_7t        0x00000908        0x0
+ .glue_7t       0x00000908        0x0 linker stubs
+
+.vfp11_veneer   0x00000908        0x0
+ .vfp11_veneer  0x00000908        0x0 linker stubs
+
+.v4_bx          0x00000908        0x0
+ .v4_bx         0x00000908        0x0 linker stubs
+
+.iplt           0x00000908        0x0
+ .iplt          0x00000908        0x0 primes.o
+
+.rel.dyn        0x00000908        0x0
+ .rel.iplt      0x00000908        0x0 primes.o
+
+.data           0x20000000        0x0 load address 0x00000908
+                0x20000000                __data_start = .
+ *(.data*)
+ .data          0x20000000        0x0 primes.o
+ .data          0x20000000        0x0 lib.o
+ .data          0x20000000        0x0 startup.o
+ .data          0x20000000        0x0 C:\Program Files (x86)\GNU Tools ARM Embedded\7 2018-q2-update\arm-none-eabi\lib\thumb\v6-m\libgcc.a(_udivsi3.o)
+ .data          0x20000000        0x0 C:\Program Files (x86)\GNU Tools ARM Embedded\7 2018-q2-update\arm-none-eabi\lib\thumb\v6-m\libgcc.a(_dvmd_tls.o)
+                0x20000000                . = ALIGN (0x4)
+                0x20000000                __data_end = .
+
+.igot.plt       0x20000000        0x0 load address 0x00000908
+ .igot.plt      0x20000000        0x0 primes.o
+
+.bss            0x20000000      0xfcc load address 0x00000908
+                0x20000000                __bss_start = .
+ *(.bss*)
+ .bss           0x20000000      0xfcc primes.o
+ .bss           0x20000fcc        0x0 lib.o
+ .bss           0x20000fcc        0x0 startup.o
+ .bss           0x20000fcc        0x0 C:\Program Files (x86)\GNU Tools ARM Embedded\7 2018-q2-update\arm-none-eabi\lib\thumb\v6-m\libgcc.a(_udivsi3.o)
+ .bss           0x20000fcc        0x0 C:\Program Files (x86)\GNU Tools ARM Embedded\7 2018-q2-update\arm-none-eabi\lib\thumb\v6-m\libgcc.a(_dvmd_tls.o)
+ *(COMMON)
+                0x20000fcc                . = ALIGN (0x4)
+                0x20000fcc                __bss_end = .
+                0x20000fcc                __end = .
+                0x20004000                __stack = (ORIGIN (RAM) + LENGTH (RAM))
+                0x20003800                __stack_limit = (__stack - 0x800)
+                0x00000001                ASSERT ((__stack_limit >= __end), region RAM overflowed with stack)
+OUTPUT(primes.elf elf32-littlearm)
+
+.debug_info     0x00000000      0xb16
+ .debug_info    0x00000000      0x42b primes.o
+ .debug_info    0x0000042b      0x4fd lib.o
+ .debug_info    0x00000928      0x1ee startup.o
+
+.debug_abbrev   0x00000000      0x60b
+ .debug_abbrev  0x00000000      0x295 primes.o
+ .debug_abbrev  0x00000295      0x23e lib.o
+ .debug_abbrev  0x000004d3      0x138 startup.o
+
+.debug_loc      0x00000000      0x6a7
+ .debug_loc     0x00000000       0xcf primes.o
+ .debug_loc     0x000000cf      0x510 lib.o
+ .debug_loc     0x000005df       0xc8 startup.o
+
+.debug_aranges  0x00000000       0x60
+ .debug_aranges
+                0x00000000       0x20 primes.o
+ .debug_aranges
+                0x00000020       0x20 lib.o
+ .debug_aranges
+                0x00000040       0x20 startup.o
+
+.debug_ranges   0x00000000       0x60
+ .debug_ranges  0x00000000       0x30 primes.o
+ .debug_ranges  0x00000030       0x30 lib.o
+
+.debug_line     0x00000000      0x34e
+ .debug_line    0x00000000      0x185 primes.o
+ .debug_line    0x00000185      0x13c lib.o
+ .debug_line    0x000002c1       0x8d startup.o
+
+.debug_str      0x00000000      0x29b
+ .debug_str     0x00000000      0x1ae primes.o
+                                0x1c4 (size before relaxing)
+ .debug_str     0x000001ae       0x5d lib.o
+                                0x151 (size before relaxing)
+ .debug_str     0x0000020b       0x90 startup.o
+                                0x16f (size before relaxing)
+
+.comment        0x00000000       0x7f
+ .comment       0x00000000       0x7f primes.o
+                                 0x80 (size before relaxing)
+ .comment       0x0000007f       0x80 lib.o
+ .comment       0x0000007f       0x80 startup.o
+
+.ARM.attributes
+                0x00000000       0x31
+ .ARM.attributes
+                0x00000000       0x31 primes.o
+ .ARM.attributes
+                0x00000031       0x31 lib.o
+ .ARM.attributes
+                0x00000062       0x31 startup.o
+ .ARM.attributes
+                0x00000093       0x1e C:\Program Files (x86)\GNU Tools ARM Embedded\7 2018-q2-update\arm-none-eabi\lib\thumb\v6-m\libgcc.a(_udivsi3.o)
+ .ARM.attributes
+                0x000000b1       0x1e C:\Program Files (x86)\GNU Tools ARM Embedded\7 2018-q2-update\arm-none-eabi\lib\thumb\v6-m\libgcc.a(_dvmd_tls.o)
+
+.debug_frame    0x00000000      0x2e0
+ .debug_frame   0x00000000      0x128 primes.o
+ .debug_frame   0x00000128       0xec lib.o
+ .debug_frame   0x00000214       0xac startup.o
+ .debug_frame   0x000002c0       0x20 C:\Program Files (x86)\GNU Tools ARM Embedded\7 2018-q2-update\arm-none-eabi\lib\thumb\v6-m\libgcc.a(_udivsi3.o)

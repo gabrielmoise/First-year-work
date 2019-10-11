@@ -1,0 +1,207 @@
+Archive member included to satisfy reference by file (symbol)
+
+C:\Program Files (x86)\GNU Tools ARM Embedded\7 2018-q2-update\arm-none-eabi\lib\thumb\v6-m\libgcc.a(_udivsi3.o)
+                              lib.o (__aeabi_uidiv)
+C:\Program Files (x86)\GNU Tools ARM Embedded\7 2018-q2-update\arm-none-eabi\lib\thumb\v6-m\libgcc.a(_dvmd_tls.o)
+                              C:\Program Files (x86)\GNU Tools ARM Embedded\7 2018-q2-update\arm-none-eabi\lib\thumb\v6-m\libgcc.a(_udivsi3.o) (__aeabi_idiv0)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x00000000         0x00040000         xr
+RAM              0x20000000         0x00004000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD random.o
+LOAD lib.o
+LOAD startup.o
+LOAD C:\Program Files (x86)\GNU Tools ARM Embedded\7 2018-q2-update\arm-none-eabi\lib\thumb\v6-m\libgcc.a
+
+.text           0x00000000      0x708
+ *(.vectors)
+ .vectors       0x00000000       0xc0 startup.o
+                0x00000000                __vectors
+ *(.text*)
+ .text          0x000000c0      0x14c random.o
+                0x000000c0                serial_putc
+                0x000000cc                serial_init
+                0x0000017c                serial_printf
+                0x0000019c                randint
+                0x000001bc                start_timer
+                0x000001dc                stop_timer
+                0x000001e8                init
+ .text          0x0000020c      0x20c lib.o
+                0x00000368                atoi
+                0x000003a8                xtou
+                0x000003d2                do_print
+                0x000003e6                sprintf
+ .text          0x00000418      0x15c startup.o
+                0x00000418                spin
+                0x00000418                default_handler
+                0x00000460                lpcomp_handler
+                0x00000460                systick_handler
+                0x00000460                timer0_handler
+                0x00000460                swi0_handler
+                0x00000460                rtc0_handler
+                0x00000460                rtc1_handler
+                0x00000460                wdt_handler
+                0x00000460                timer2_handler
+                0x00000460                timer1_handler
+                0x00000460                nmi_handler
+                0x00000460                uart_handler
+                0x00000460                swi5_handler
+                0x00000460                svc_handler
+                0x00000460                swi4_handler
+                0x00000460                hardfault_handler
+                0x00000460                swi1_handler
+                0x00000460                qdec_handler
+                0x00000460                spi0_twi0_handler
+                0x00000460                rng_handler
+                0x00000460                temp_handler
+                0x00000460                power_clock_handler
+                0x00000460                gpiote_handler
+                0x00000460                adc_handler
+                0x00000460                swi2_handler
+                0x00000460                ccm_aar_handler
+                0x00000460                pendsv_handler
+                0x00000460                ecb_handler
+                0x00000460                swi3_handler
+                0x00000460                spi1_twi1_handler
+                0x00000460                radio_handler
+                0x00000468                null
+                0x00000468                phos_start
+                0x00000468                phos_init
+                0x0000046a                __reset
+                0x000004e4                set_priority
+                0x00000544                enable_irq
+                0x00000554                disable_irq
+                0x00000564                clear_pending
+ .text          0x00000574      0x120 C:\Program Files (x86)\GNU Tools ARM Embedded\7 2018-q2-update\arm-none-eabi\lib\thumb\v6-m\libgcc.a(_udivsi3.o)
+                0x00000574                __aeabi_uidiv
+                0x00000574                __udivsi3
+                0x00000680                __aeabi_uidivmod
+ .text          0x00000694        0x4 C:\Program Files (x86)\GNU Tools ARM Embedded\7 2018-q2-update\arm-none-eabi\lib\thumb\v6-m\libgcc.a(_dvmd_tls.o)
+                0x00000694                __aeabi_idiv0
+                0x00000694                __aeabi_ldiv0
+ *(.rodata*)
+ .rodata        0x00000698       0x58 lib.o
+ .rodata.str1.4
+                0x000006f0       0x18 lib.o
+                                 0x17 (size before relaxing)
+                0x00000708                . = ALIGN (0x4)
+                0x00000708                __etext = .
+
+.glue_7         0x00000708        0x0
+ .glue_7        0x00000708        0x0 linker stubs
+
+.glue_7t        0x00000708        0x0
+ .glue_7t       0x00000708        0x0 linker stubs
+
+.vfp11_veneer   0x00000708        0x0
+ .vfp11_veneer  0x00000708        0x0 linker stubs
+
+.v4_bx          0x00000708        0x0
+ .v4_bx         0x00000708        0x0 linker stubs
+
+.iplt           0x00000708        0x0
+ .iplt          0x00000708        0x0 random.o
+
+.rel.dyn        0x00000708        0x0
+ .rel.iplt      0x00000708        0x0 random.o
+
+.data           0x20000000        0x0 load address 0x00000708
+                0x20000000                __data_start = .
+ *(.data*)
+ .data          0x20000000        0x0 random.o
+ .data          0x20000000        0x0 lib.o
+ .data          0x20000000        0x0 startup.o
+ .data          0x20000000        0x0 C:\Program Files (x86)\GNU Tools ARM Embedded\7 2018-q2-update\arm-none-eabi\lib\thumb\v6-m\libgcc.a(_udivsi3.o)
+ .data          0x20000000        0x0 C:\Program Files (x86)\GNU Tools ARM Embedded\7 2018-q2-update\arm-none-eabi\lib\thumb\v6-m\libgcc.a(_dvmd_tls.o)
+                0x20000000                . = ALIGN (0x4)
+                0x20000000                __data_end = .
+
+.igot.plt       0x20000000        0x0 load address 0x00000708
+ .igot.plt      0x20000000        0x0 random.o
+
+.bss            0x20000000        0x0 load address 0x00000708
+                0x20000000                __bss_start = .
+ *(.bss*)
+ .bss           0x20000000        0x0 random.o
+ .bss           0x20000000        0x0 lib.o
+ .bss           0x20000000        0x0 startup.o
+ .bss           0x20000000        0x0 C:\Program Files (x86)\GNU Tools ARM Embedded\7 2018-q2-update\arm-none-eabi\lib\thumb\v6-m\libgcc.a(_udivsi3.o)
+ .bss           0x20000000        0x0 C:\Program Files (x86)\GNU Tools ARM Embedded\7 2018-q2-update\arm-none-eabi\lib\thumb\v6-m\libgcc.a(_dvmd_tls.o)
+ *(COMMON)
+                0x20000000                . = ALIGN (0x4)
+                0x20000000                __bss_end = .
+                0x20000000                __end = .
+                0x20004000                __stack = (ORIGIN (RAM) + LENGTH (RAM))
+                0x20003800                __stack_limit = (__stack - 0x800)
+                0x00000001                ASSERT ((__stack_limit >= __end), region RAM overflowed with stack)
+OUTPUT(random.elf elf32-littlearm)
+
+.debug_info     0x00000000      0x8e8
+ .debug_info    0x00000000      0x1fd random.o
+ .debug_info    0x000001fd      0x4fd lib.o
+ .debug_info    0x000006fa      0x1ee startup.o
+
+.debug_abbrev   0x00000000      0x4e5
+ .debug_abbrev  0x00000000      0x16f random.o
+ .debug_abbrev  0x0000016f      0x23e lib.o
+ .debug_abbrev  0x000003ad      0x138 startup.o
+
+.debug_loc      0x00000000      0x61c
+ .debug_loc     0x00000000       0x44 random.o
+ .debug_loc     0x00000044      0x510 lib.o
+ .debug_loc     0x00000554       0xc8 startup.o
+
+.debug_aranges  0x00000000       0x60
+ .debug_aranges
+                0x00000000       0x20 random.o
+ .debug_aranges
+                0x00000020       0x20 lib.o
+ .debug_aranges
+                0x00000040       0x20 startup.o
+
+.debug_line     0x00000000      0x2cf
+ .debug_line    0x00000000      0x106 random.o
+ .debug_line    0x00000106      0x13c lib.o
+ .debug_line    0x00000242       0x8d startup.o
+
+.debug_str      0x00000000      0x23e
+ .debug_str     0x00000000      0x149 random.o
+                                0x15f (size before relaxing)
+ .debug_str     0x00000149       0x5d lib.o
+                                0x151 (size before relaxing)
+ .debug_str     0x000001a6       0x98 startup.o
+                                0x16f (size before relaxing)
+
+.comment        0x00000000       0x7f
+ .comment       0x00000000       0x7f random.o
+                                 0x80 (size before relaxing)
+ .comment       0x0000007f       0x80 lib.o
+ .comment       0x0000007f       0x80 startup.o
+
+.ARM.attributes
+                0x00000000       0x31
+ .ARM.attributes
+                0x00000000       0x31 random.o
+ .ARM.attributes
+                0x00000031       0x31 lib.o
+ .ARM.attributes
+                0x00000062       0x31 startup.o
+ .ARM.attributes
+                0x00000093       0x1e C:\Program Files (x86)\GNU Tools ARM Embedded\7 2018-q2-update\arm-none-eabi\lib\thumb\v6-m\libgcc.a(_udivsi3.o)
+ .ARM.attributes
+                0x000000b1       0x1e C:\Program Files (x86)\GNU Tools ARM Embedded\7 2018-q2-update\arm-none-eabi\lib\thumb\v6-m\libgcc.a(_dvmd_tls.o)
+
+.debug_frame    0x00000000      0x25c
+ .debug_frame   0x00000000       0xa4 random.o
+ .debug_frame   0x000000a4       0xec lib.o
+ .debug_frame   0x00000190       0xac startup.o
+ .debug_frame   0x0000023c       0x20 C:\Program Files (x86)\GNU Tools ARM Embedded\7 2018-q2-update\arm-none-eabi\lib\thumb\v6-m\libgcc.a(_udivsi3.o)
+
+.debug_ranges   0x00000000       0x30
+ .debug_ranges  0x00000000       0x30 lib.o
